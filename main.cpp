@@ -4,7 +4,6 @@
 #include <thread>
 #include <stdlib.h>
 #include "functions.h"
-
 int DeleteConsole()
 {
     //Check OS
@@ -22,6 +21,7 @@ int DeleteConsole()
         return 1;
     }
     //Output --help/-h Command }
+    return 0;
 
 }
 
@@ -41,12 +41,6 @@ void StartupLoadingScreen(int time)
         DeleteConsole();
     }
 
-}
-void EnterToReturn () {
-    std::cout << "Press Enter to Return" << std::endl;
-    char temp;
-    std::cin.get(temp);
-    DeleteConsole();
 }
 
 void Beginner()
@@ -79,6 +73,7 @@ void Overall()
     std::cout << "3. Data Type Conversion" << std::endl;
 
     int choice;
+    std::cin >> choice;
     switch (choice)
     {
         case 1:
@@ -89,6 +84,9 @@ void Overall()
             break;
         case 3:
             Data_Type_Conversion();
+            break;
+        default:
+            std::cout << "Please choose a number between 1 and 3" << std::endl;
             break;
     }
 }
@@ -181,6 +179,89 @@ int main() {
 
 
 
+
+void Data_Types()
+{
+    DeleteConsole();
+    std::cout << "Boolean\n\t True/False"
+                 "\n\t You can calculate with it"
+                 "\n\t Declared by using bool" << std::endl;
+    std::cout << "Character\n\t Numbers from -128 to 127"
+                 "\n\t You can't calculate with it"
+                 "\n\t Declared by using char" << std::endl;
+    std::cout << "Short\n\t Numbers from -32768 to 32767"
+                 "\n\t You can calculate with it"
+                 "\n\t Declared by using char" << std::endl;
+    std::cout << "Integer\n\t Numbers from -2147483648 to 2147483647"
+                 "\n\t You can calculate with it"
+                 "\n\t Declared by using int" << std::endl;
+    std::cout << "Long\n\t Numbers from -9223372036854775808 to 9223372036854775807"
+                 "\n\t You can calculate with it"
+                 "\n\t Declared by using long long" << std::endl;
+    std::cout << "Float\n\t Numbers from 1.2E-38 to 3.4E+38"
+                 "\n\t You can calculate with it"
+                 "\n\t Declared by using float" << std::endl;
+    std::cout << "Double\n\t Numbers from 2.3E-308 to 1.7E+308"
+                 "\n\t You can calculate with it"
+                 "\n\t Declared by using double" << std::endl;
+    std::cout << "\n\n 1. To exit to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Overall();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
+}
+void Data_Size()
+{
+    DeleteConsole();
+    std::cout << "Boolean\n\t 1 Byte / 8 Bits" << std::endl;
+    std::cout << "Character\n\t 1 Byte / 8 Bits" << std::endl;
+    std::cout << "Short\n\t 2 Byte / 16 Bits" << std::endl;
+    std::cout << "Integer\n\t 4 Byte / 32 Bits" << std::endl;
+    std::cout << "Long\n\t 8 Byte / 64 Bits" << std::endl;
+    std::cout << "Float\n\t 4 Byte / 32 Bits" << std::endl;
+    std::cout << "Double\n\t 8 byte / 64 Bits" << std::endl;
+    std::cout << "\n\n 1. To exit to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Overall();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
+}
+
+void Data_Type_Conversion()
+{
+    DeleteConsole();
+    std::cout << "Boolean\n\t"
+                 "Casting  always 1 or 0\n" << std::endl;
+    std::cout << "Character\n\t"
+                 "Casting results in ASCII-Type cast\n" << std::endl;
+    std::cout << "Short\n\t"
+                 "Casting results in Same Number\n" << std::endl;
+    std::cout << "Integer\n\t"
+                 "Casting results in Same Number\n" << std::endl;
+    std::cout << "Long\n\t"
+                 "Casting results in Same Number\n" << std::endl;
+    std::cout << "Float\n\t"
+                 "Casting Cuts out all Numbers after .\n"
+                 "\tNOTE: IT DOESN´T ROUND UP\n" << std::endl;
+    std::cout << "Double\n\t"
+                 "Casting Cuts out all Numbers after .\n"
+                 "\tNOTE: IT DOESN´T ROUND UP\n" << std::endl;
+    std::cout << "\n\n 1. To exit to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        StartUpMenu();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
+}
+
 void Bytes_Of_Data_Types()
 {
     // 1 byte = 8 bits (Theoretisch reicht auch 1 Bit aber ist so effizienter)
@@ -219,7 +300,5 @@ void Bytes_Of_Data_Types()
 
     //8 bytes = 64 bits(2^64 = 18446744073709551616) - (also von 0 bis 18446744073709551615)
     unsigned long long my_unsigned_long_long = 5000000000;
-
-
 
 }
