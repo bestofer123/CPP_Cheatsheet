@@ -3,7 +3,7 @@
 #include <chrono>
 #include <thread>
 #include <stdlib.h>
-
+#include "functions.h"
 
 int DeleteConsole()
 {
@@ -25,7 +25,7 @@ int DeleteConsole()
 
 }
 
-void LoadingScreen(int time)
+void StartupLoadingScreen(int time)
 {
     for (int i = 0; i < time; i++)
     {
@@ -40,10 +40,18 @@ void LoadingScreen(int time)
         std::this_thread::sleep_for(std::chrono::seconds(1));
         DeleteConsole();
     }
+
+}
+void EnterToReturn () {
+    std::cout << "Press Enter to Return" << std::endl;
+    char temp;
+    std::cin.get(temp);
+    DeleteConsole();
 }
 
 void Beginner()
 {
+    DeleteConsole();
     std::cout << "1. If Check" << std::endl;
     std::cout << "2. Switch-Case" << std::endl;
     std::cout << "3. Operators" << std::endl;
@@ -54,13 +62,14 @@ void Beginner()
 
 void Advanced()
 {
+    DeleteConsole();
     std::cout << "1. Sorting Algorithms" << std::endl;
     std::cout << "2. Searching Algorithms" << std::endl;
 }
 
 void Expert()
 {
-
+    DeleteConsole();
 }
 
 void Overall()
@@ -68,19 +77,51 @@ void Overall()
     std::cout << "1. Data Types" << std::endl;
     std::cout << "2. Data Size" << std::endl;
     std::cout << "3. Data Type Conversion" << std::endl;
+
+    int choice;
+    switch (choice)
+    {
+        case 1:
+            Data_Types();
+            break;
+        case 2:
+            Data_Size();
+            break;
+        case 3:
+            Data_Type_Conversion();
+            break;
+    }
 }
 
 void Exit()
 {
-    std::cout << "Exit Successful" << std::endl;
+    std::cout << "Are you Sure you want to Exit? \n\n1. Yes\n2.No\n" << std::endl;
+    int choice;
+    std::cin >> choice;
     DeleteConsole();
-
+    if (choice == 1)
+        std::cout << "Goodbye" << std::endl;
+    else if (choice == 2)
+        StartUpMenu();
+    else
+        std::cout << "Please choose a number between 1 and 2" << std::endl;
 }
 
 void Creator_Knowledge()
 {
-    std::cout << "Created by\n\nMarcel Ndrecaj\n\n\nLicensed Under GPL_v3" << std::endl;
     DeleteConsole();
+    std::cout << "Created by\n\nMarcel Ndrecaj\n\nLicensed Under GPL_v3" << std::endl;
+    std::cout << "\n\n1. Return to Menu\n2. Exit Programm" << std::endl;
+    unsigned int choice;
+    std::cin >> choice;
+    DeleteConsole();
+    if (choice == 1)
+        StartUpMenu();
+    else if (choice == 2)
+        Exit();
+    else
+        std::cout << "Please choose a number between 1 and 2" << std::endl;
+
 }
 
 void StartUpMenu()
@@ -131,7 +172,7 @@ void StartUpMenu()
 
 int main() {
 
-    LoadingScreen(1);
+    StartupLoadingScreen(1);
     StartUpMenu();
     std::cout << "Return Succesfull" << std::endl;
 

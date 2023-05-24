@@ -3,4 +3,4 @@ project(Udemy_Jan)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Udemy_Jan main.cpp)
+add_executable(Udemy_Jan main.cpp functions.h)
