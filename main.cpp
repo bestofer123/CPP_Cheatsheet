@@ -4,6 +4,7 @@
 #include <thread>
 #include <stdlib.h>
 #include "functions.h"
+
 int DeleteConsole()
 {
     //Check OS
@@ -21,6 +22,7 @@ int DeleteConsole()
         return 1;
     }
     //Output --help/-h Command }
+    std::cout << "===============================================" << std::endl;
     return 0;
 
 }
@@ -407,18 +409,16 @@ void For_Loop()
 }
 void While_Loop()
 {
+
     DeleteConsole();
-    std::cout << "Typical If Statement:"
-                 "\n\ncondition;"
-                 "\nIf (True condition)"
+    std::cout << "Typical While Loop Statement:"
+                 "\n\nbool condition;"
+                 "\nWhile (condition = True)"
+                 "\n{"
                  "\n\t  Do This"
-                 "\n\t  exit"
-                 "\nelse if (True condition)"
-                 "\n\t  If this instead Do This"
-                 "\n\t  exit"
-                 "\nelse"
-                 "\n\t  If none of that, Do This"
-                 "\n\t  exit"
+                 "\n\t  update condition *X* times"
+                 "\n}*End Of Loop when condition = False* "
+                 "\n\n NOTE: While Statement runs 0 Times if condition = False"
                  "\n\n 1. Return to Menu" << std::endl;
     int choice;
     std::cin >> choice;
@@ -431,17 +431,14 @@ void While_Loop()
 void Do_While_Loop()
 {
     DeleteConsole();
-    std::cout << "Typical If Statement:"
-                 "\n\ncondition;"
-                 "\nIf (True condition)"
+    std::cout << "Typical Do-While Loop Statement:"
+                 "\n\ndo"
+                 "\n{"
                  "\n\t  Do This"
-                 "\n\t  exit"
-                 "\nelse if (True condition)"
-                 "\n\t  If this instead Do This"
-                 "\n\t  exit"
-                 "\nelse"
-                 "\n\t  If none of that, Do This"
-                 "\n\t  exit"
+                 "\n\t  update condition"
+                 "\n}while (True condition)"
+                 "\n*End Of Loop when condition = False* "
+                 "\n\n NOTE: While Statement runs at least 1 Time even if condition = False"
                  "\n\n 1. Return to Menu" << std::endl;
     int choice;
     std::cin >> choice;

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.23)
-project(Udemy_Jan)
+project(CPP_Cheatsheet)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Udemy_Jan main.cpp functions.h)
+add_executable(CPP_Cheatsheet main.cpp functions.h)
