@@ -61,25 +61,25 @@ void Beginner()
             Check_If();
             break;
         case 2:
-
+            Switch_Case();
             break;
         case 3:
-
+            Operators();
             break;
         case 4:
-
+            For_Loop();
             break;
         case 5:
-
+            While_Loop();
             break;
         case 6:
-
+            Do_While_Loop();
             break;
         case 7:
-
+            Arrays();
             break;
         case 8:
-
+            Functions();
             break;
         default:
             std::cout << "Please choose a number between x and y" << std::endl;
@@ -309,35 +309,193 @@ void Check_If()
         std::cout << "Please type in 1. to Exit." << std::endl;
     DeleteConsole();
 }
-
 void Switch_Case()
 {
-
+    DeleteConsole();
+    std::cout << "Typical Switch Case Statement:"
+                 "\n\ncondition(Full_Number);"
+                 "\nswitch (Condition)"
+                 "\n\t  case 1:"
+                 "\n\t\t   Do This"
+                 "\n\t\t   break"
+                 "\n\t  case 2:"
+                 "\n\t\t   Do This"
+                 "\n\t\t   break"
+                 "\n\t  case X-Y"
+                 "\n\t\t   ..."
+                 "\n\t\t   break"
+                 "\n\t  default:"
+                 "\n\t\t   Do This"
+                 "\n\t\t   break"
+                 "\n\n 1. Return to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Beginner();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
 }
 void Operators()
 {
-
+    DeleteConsole();
+    std::cout << "Most used Mathematical Operators:"
+                 "\n+\tAddition"
+                 "\n\t 1+1 = 2\n"
+                 "\n-\tSubtraction"
+                 "\n\t 2-1 = 1\n"
+                 "\n*\tMultiplication"
+                 "\n\t 2*4 = 8\n"
+                 "\n/\tDivision"
+                 "\n\t 6/2 = 3\n"
+                 "\n%\tModulo"
+                 "\n\t 7/3 = (2 Rest)1\n"
+                 "\n=\tAssignment"
+                 "\n\t a = 2\n"
+                 "\n==\tEqual to"
+                 "\n\t (1 == 1) = true\n"
+                 "\n!=\tNot Equal to"
+                 "\n\t (1 != 2) = true\n"
+                 "\n>\tGreater than"
+                 "\n\t (2 > 1) = true\n"
+                 "\n<\t Less than"
+                 "\n\t (2 < 2) = false\n"
+                 "\n>=\tGreater than or Equal to"
+                 "\n\t (2 >= 2) = true\n"
+                 "\n<=\tLess than or Equal to"
+                 "\n\t (2 <= 4) = true\n"
+                 "\n&&\tLogical AND"
+                 "\n\t true && true = true\n"
+                 "\n||\tLogical OR"
+                 "\n\t (true || false) = true\n"
+                 "\n!\tLogical NOT"
+                 "\n\t !false = true\n"
+                 "\n++\tIncrement"
+                 "\n\t 1++ = 2\n"
+                 "\n--\tDecrement"
+                 "\n\t 1-- = 0\n"
+                 "\n+=\tAddition Assignment"
+                 "\n\t (3 += 4) = 7\n"
+                 "\n-=\tSubtraction Assignment"
+                 "\n\t (3-=2) = 1"
+                 "\n\n 1. Return to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Beginner();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
 }
 void For_Loop()
 {
-
+    DeleteConsole();
+    std::cout << "Typical For Loop Statement:"
+                 "\n\nint counter;"
+                 "\nfor (int i = 0; i < counter; i++)"
+                 "\n{"
+                 "\n\t  Do This *counter* times"
+                 "\n}*End Of Loop*"
+                 "\n\n 1. Return to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Beginner();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
 }
 void While_Loop()
 {
-
+    DeleteConsole();
+    std::cout << "Typical If Statement:"
+                 "\n\ncondition;"
+                 "\nIf (True condition)"
+                 "\n\t  Do This"
+                 "\n\t  exit"
+                 "\nelse if (True condition)"
+                 "\n\t  If this instead Do This"
+                 "\n\t  exit"
+                 "\nelse"
+                 "\n\t  If none of that, Do This"
+                 "\n\t  exit"
+                 "\n\n 1. Return to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Beginner();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
 }
 void Do_While_Loop()
 {
-
+    DeleteConsole();
+    std::cout << "Typical If Statement:"
+                 "\n\ncondition;"
+                 "\nIf (True condition)"
+                 "\n\t  Do This"
+                 "\n\t  exit"
+                 "\nelse if (True condition)"
+                 "\n\t  If this instead Do This"
+                 "\n\t  exit"
+                 "\nelse"
+                 "\n\t  If none of that, Do This"
+                 "\n\t  exit"
+                 "\n\n 1. Return to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Beginner();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
 }
-
 void Arrays()
 {
-
+    DeleteConsole();
+    std::cout << "Typical If Statement:"
+                 "\n\ncondition;"
+                 "\nIf (True condition)"
+                 "\n\t  Do This"
+                 "\n\t  exit"
+                 "\nelse if (True condition)"
+                 "\n\t  If this instead Do This"
+                 "\n\t  exit"
+                 "\nelse"
+                 "\n\t  If none of that, Do This"
+                 "\n\t  exit"
+                 "\n\n 1. Return to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Beginner();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
 }
 void Functions()
 {
-
+    DeleteConsole();
+    std::cout << "Typical If Statement:"
+                 "\n\ncondition;"
+                 "\nIf (True condition)"
+                 "\n\t  Do This"
+                 "\n\t  exit"
+                 "\nelse if (True condition)"
+                 "\n\t  If this instead Do This"
+                 "\n\t  exit"
+                 "\nelse"
+                 "\n\t  If none of that, Do This"
+                 "\n\t  exit"
+                 "\n\n 1. Return to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Beginner();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
 }
 //*** End Beginner ***//
 
@@ -387,6 +545,7 @@ void Data_Types()
         std::cout << "Please type in 1. to Exit." << std::endl;
     DeleteConsole();
 }
+
 void Data_Size()
 {
     DeleteConsole();
