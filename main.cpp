@@ -1,19 +1,139 @@
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <thread>
+#include <stdlib.h>
 
-void beginnerInfo()
+
+int DeleteConsole()
 {
-    std::string beginner_info = "Welcome to my c++ CheatSheet";
+    //Check OS
+    #ifdef _WIN32
+    std::string clearCommand = "cls";
+    #else
+    std::string clearCommand = "clear";
+    #endif
 
-    std::cout << beginner_info << std::endl;
+    //Clear screen depending on OS
+    int result = std::system(clearCommand.c_str());
+    if (result != 0)
+    {
+        std::cerr << "Fehler beim Löschen des Bildschirms." << std::endl;
+        return 1;
+    }
+    //Output --help/-h Command }
 
 }
+
+void LoadingScreen(int time)
+{
+    for (int i = 0; i < time; i++)
+    {
+        DeleteConsole();
+        std::cout << "Loading." << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        DeleteConsole();
+        std::cout << "Loading.." << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        DeleteConsole();
+        std::cout << "Loading..." << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        DeleteConsole();
+    }
+}
+
+void Beginner()
+{
+    std::cout << "1. If Check" << std::endl;
+    std::cout << "2. Switch-Case" << std::endl;
+    std::cout << "3. Operators" << std::endl;
+    std::cout << "4. For-Loops" << std::endl;
+    std::cout << "5. While-Loops" << std::endl;
+    std::cout << "6. Do-While-Loops" << std::endl;
+}
+
+void Advanced()
+{
+    std::cout << "1. Sorting Algorithms" << std::endl;
+    std::cout << "2. Searching Algorithms" << std::endl;
+}
+
+void Expert()
+{
+
+}
+
+void Overall()
+{
+    std::cout << "1. Data Types" << std::endl;
+    std::cout << "2. Data Size" << std::endl;
+    std::cout << "3. Data Type Conversion" << std::endl;
+}
+
+void Exit()
+{
+    std::cout << "Exit Successful" << std::endl;
+    DeleteConsole();
+
+}
+
+void Creator_Knowledge()
+{
+    std::cout << "Created by\n\nMarcel Ndrecaj\n\n\nLicensed Under GPL_v3" << std::endl;
+    DeleteConsole();
+}
+
+void StartUpMenu()
+{
+    std::cout << "1. Beginner" << std::endl;
+    std::cout << "2. Advanced" << std::endl;
+    std::cout << "3. Expert" << std::endl;
+    std::cout << "4. Overall Information" << std::endl;
+    std::cout << "5. Exit" << std::endl;
+    std::cout << "6. Creator Knowledge\n" << std::endl;
+    std::cout << "Please choose a number: " << std::endl;
+    unsigned int choice;
+    std::cin >> choice;
+    switch (choice)
+    {
+        case 1:
+            Beginner();
+            break;
+        case 2:
+            Advanced();
+            break;
+        case 3:
+            Expert();
+            break;
+        case 4:
+            Overall();
+            break;
+        case 5:
+            Exit();
+            break;
+        case 6:
+            Creator_Knowledge();
+            break;
+        default:
+            std::cout << "Please choose a number between 1 and 6" << std::endl;
+            break;
+    }
+
+
+
+    std::cin >> choice;
+    DeleteConsole();
+}
+
+
 
 //** Main Function **//
 
 int main() {
 
-    beginnerInfo();
+    LoadingScreen(1);
+    StartUpMenu();
+    std::cout << "Return Succesfull" << std::endl;
 
 }
 //* End Main Function *//
@@ -33,16 +153,16 @@ void Bytes_Of_Data_Types()
     short my_short = 300;
 
     //4 bytes = 32 bits(2^32 = 4294967296) - (also von -2147483648 bis 2147483647)
-    int my_int = 100'000;
+    int my_int = 100000;
 
     //8 bytes = 64 bits(2^64 = 18446744073709551616) - (also von -9223372036854775808 bis 9223372036854775807)
-    long long my_long_long = 5'000'000'000;
+    long long my_long_long = 5000000000;
 
     //4 bytes = 32 bits(2^32 = 4294967296) - (also von -2147483648 bis 2147483647)
     float my_float = 3.14;
 
     //8 bytes = 64 bits(2^64 = 18446744073709551616) - (also von -9223372036854775808 bis 9223372036854775807)
-    double my_double = 500'000'000'000.14;
+    double my_double = 500000000000.14;
 
 
     //unsigned = nur positive Zahlen
@@ -54,10 +174,10 @@ void Bytes_Of_Data_Types()
     unsigned short my_unsigned_short = 300;
 
     //4bytes = 32 bits(2^32 = 4294967296) - (also von 0 bis 4294967295)
-    unsigned int my_unsigned_int = 100'000;
+    unsigned int my_unsigned_int = 100000;
 
     //8 bytes = 64 bits(2^64 = 18446744073709551616) - (also von 0 bis 18446744073709551615)
-    unsigned long long my_unsigned_long_long = 5'000'000'000;
+    unsigned long long my_unsigned_long_long = 5000000000;
 
 
 
