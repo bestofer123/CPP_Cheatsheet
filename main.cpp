@@ -29,7 +29,6 @@ void StartupLoadingScreen(int time)
 {
     for (int i = 0; i < time; i++)
     {
-        DeleteConsole();
         std::cout << "Loading." << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
         DeleteConsole();
@@ -52,6 +51,40 @@ void Beginner()
     std::cout << "4. For-Loops" << std::endl;
     std::cout << "5. While-Loops" << std::endl;
     std::cout << "6. Do-While-Loops" << std::endl;
+    std::cout << "7. Arrays" << std::endl;
+    std::cout << "8. Functions" << std::endl;
+    unsigned int choice;
+    std::cin >> choice;
+    switch (choice)
+    {
+        case 1:
+            Check_If();
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            break;
+        case 5:
+
+            break;
+        case 6:
+
+            break;
+        case 7:
+
+            break;
+        case 8:
+
+            break;
+        default:
+            std::cout << "Please choose a number between x and y" << std::endl;
+            break;
+    }
 }
 
 void Advanced()
@@ -59,11 +92,84 @@ void Advanced()
     DeleteConsole();
     std::cout << "1. Sorting Algorithms" << std::endl;
     std::cout << "2. Searching Algorithms" << std::endl;
+    std::cout << "3. Pointers" << std::endl;
+    std::cout << "4. Structs" << std::endl;
+    std::cout << "5. Classes" << std::endl;
+    std::cout << "6. Inheritance" << std::endl;
+    std::cout << "7. Polymorphism" << std::endl;
+    std::cout << "8. Templates" << std::endl;
+    std::cout << "9. Exception Handling" << std::endl;
+    std::cout << "10. File Handling" << std::endl;
+    std::cout << "11. Recursion" << std::endl;
+    std::cout << "12 Unit Testing" << std::endl;
+    unsigned int choice;
+    std::cin >> choice;
+    switch (choice) {
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            break;
+        case 5:
+
+            break;
+        case 6:
+
+            break;
+        default:
+            std::cout << "Please choose a number between x and y" << std::endl;
+            break;
+    }
 }
 
 void Expert()
 {
+    std::cout << "1. Dynamic Memory Allocation" << std::endl;
+    std::cout << "2. Linked Lists" << std::endl;
+    std::cout << "3. Stacks" << std::endl;
+    std::cout << "4. Queues" << std::endl;
+    std::cout << "5. Trees" << std::endl;
+    std::cout << "6. Graphs" << std::endl;
+    std::cout << "7. Hashing" << std::endl;
+    std::cout << "8. Bit Manipulation" << std::endl;
+    std::cout << "9. Preprocessor Directives" << std::endl;
+    std::cout << "10. Multithreading" << std::endl;
+    std::cout << "11. Networking" << std::endl;
+    std::cout << "12. Smart Pointers" << std::endl;
+    std::cout << "13. Regular Expressions" << std::endl;
     DeleteConsole();
+    unsigned int choice;
+    std::cin >> choice;
+    switch (choice) {
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            break;
+        case 5:
+
+            break;
+        case 6:
+
+            break;
+        default:
+            std::cout << "Please choose a number between x and y" << std::endl;
+            break;
+    }
 }
 
 void Overall()
@@ -124,6 +230,7 @@ void Creator_Knowledge()
 
 void StartUpMenu()
 {
+    DeleteConsole();
     std::cout << "1. Beginner" << std::endl;
     std::cout << "2. Advanced" << std::endl;
     std::cout << "3. Expert" << std::endl;
@@ -157,10 +264,6 @@ void StartUpMenu()
             std::cout << "Please choose a number between 1 and 6" << std::endl;
             break;
     }
-
-
-
-    std::cin >> choice;
     DeleteConsole();
 }
 
@@ -169,8 +272,11 @@ void StartUpMenu()
 //** Main Function **//
 
 int main() {
-
-    StartupLoadingScreen(1);
+    bool debug = false;
+    if (debug)
+        StartupLoadingScreen(1);
+    else
+        std::cout << "Debug Mode Enabled\n\n" << std::endl;
     StartUpMenu();
     std::cout << "Return Succesfull" << std::endl;
 
@@ -179,6 +285,74 @@ int main() {
 
 
 
+//* Beginner *//
+void Check_If()
+{
+    DeleteConsole();
+    std::cout << "Typical If Statement:"
+                 "\n\ncondition;"
+                 "\nIf (True condition)"
+                 "\n\t  Do This"
+                 "\n\t  exit"
+                 "\nelse if (True condition)"
+                 "\n\t  If this instead Do This"
+                 "\n\t  exit"
+                 "\nelse"
+                 "\n\t  If none of that, Do This"
+                 "\n\t  exit"
+                 "\n\n 1. Return to Menu" << std::endl;
+    int choice;
+    std::cin >> choice;
+    if (choice == 1)
+        Beginner();
+    else
+        std::cout << "Please type in 1. to Exit." << std::endl;
+    DeleteConsole();
+}
+
+void Switch_Case()
+{
+
+}
+void Operators()
+{
+
+}
+void For_Loop()
+{
+
+}
+void While_Loop()
+{
+
+}
+void Do_While_Loop()
+{
+
+}
+
+void Arrays()
+{
+
+}
+void Functions()
+{
+
+}
+//*** End Beginner ***//
+
+
+//*** Advanced ***//
+
+//*** End Advanced ***//
+
+
+//*** Expert ***//
+
+//*** End Expert ***//
+
+
+//*** Overall Information ***//
 
 void Data_Types()
 {
@@ -264,29 +438,6 @@ void Data_Type_Conversion()
 
 void Bytes_Of_Data_Types()
 {
-    // 1 byte = 8 bits (Theoretisch reicht auch 1 Bit aber ist so effizienter)
-    bool my_bool1 = true;
-    bool my_bool2 = false;
-
-    // 1 byte = 8 bits(2^8 = 256) - (also von -128 bis 127)
-    char my_char = 10;
-
-    //2 bytes = 16 bits(2^16 = 65536) - (also von -32768 bis 32767)
-    short my_short = 300;
-
-    //4 bytes = 32 bits(2^32 = 4294967296) - (also von -2147483648 bis 2147483647)
-    int my_int = 100000;
-
-    //8 bytes = 64 bits(2^64 = 18446744073709551616) - (also von -9223372036854775808 bis 9223372036854775807)
-    long long my_long_long = 5000000000;
-
-    //4 bytes = 32 bits(2^32 = 4294967296) - (also von -2147483648 bis 2147483647)
-    float my_float = 3.14;
-
-    //8 bytes = 64 bits(2^64 = 18446744073709551616) - (also von -9223372036854775808 bis 9223372036854775807)
-    double my_double = 500000000000.14;
-
-
     //unsigned = nur positive Zahlen
 
     //1 byte = 8 bits(2^8 = 256) - (also von 0 bis 255)
